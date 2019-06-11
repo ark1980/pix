@@ -1,0 +1,4 @@
+export const config = {
+  API_KEY: "c081a46e99e837c39d8ac256584950c3021da86514d222c92148bfaaa2a91c2e",
+  SECRET_KEY: "1dbea8cb99fa36160af80773c56844a2c8cc1c582afc314e0e634ebe9f9194a2"
+}
