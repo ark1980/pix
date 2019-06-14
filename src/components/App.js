@@ -4,7 +4,6 @@ import unsplash from '../api/unsplash';
 import NavBar from './NavBar';
 import Hero from './Hero';
 import ListImages from './ListImages';
-import { async } from 'q';
 
 class App extends Component {
   state = {
@@ -20,6 +19,17 @@ class App extends Component {
 
     this.setState({images: response.data})
   }
+
+  onSubmitSearch = async (term) => {
+    const response = await unsplash.get('/search/photos', {
+      params: {
+        query: term,
+        per_page: 20
+      }
+    });
+
+    this.setState({images: response.data.results})
+  }
   
   componentDidMount() {
     this.getListRandomPic();
@@ -29,7 +39,7 @@ class App extends Component {
     return(
       <div>
         <NavBar />
-        <Hero />
+        <Hero submitSearch={this.onSubmitSearch} />
         <ListImages images={this.state.images} />
       </div>
     )

@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 
-const Hero = () => {
+const Hero = (props) => {
   return(
     <div className="hero_image">
       <div className="hero_content">
@@ -10,7 +10,7 @@ const Hero = () => {
           <p>Beautiful, free photos</p>
           <p>Gifted by the world’s most generous community of photographers.</p>
         </div>
-        <SearchBar />
+        <SearchBar submitSearch={props.submitSearch}/>
       </div>
     </div>
   )

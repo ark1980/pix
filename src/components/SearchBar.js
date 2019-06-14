@@ -9,11 +9,17 @@ class SearchBar extends Component {
     this.setState({term: e.target.value})
   }
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    this.props.submitSearch(this.state.term)
+  }
+
   render() {
     console.log(this.state.term)
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input type="text"
             className="inputField"
             placeholder="Search free high quality photos"
