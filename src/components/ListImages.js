@@ -3,8 +3,10 @@ import React from 'react'
 const ListImages = (props) => {
   return (
     <div>
-      {props.images.map(img => (
-        <img src={img.urls.thumb} alt={img.alt_description} />
+      {props.images.map(({alt_description, id, urls}) => (
+        <div key={id}>
+          <img src={urls.thumb} alt={alt_description} />
+        </div>
       ))}
     </div>
   )
