@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ListImages = (props) => {
+const ImageList = (props) => {
   return (
-    <div>
+    <div className="image-list">
       {props.images.map(({alt_description, id, urls}) => (
         <div key={id}>
           <img src={urls.thumb} alt={alt_description} />
@@ -12,4 +12,4 @@ const ListImages = (props) => {
   )
 }
 
-export default ListImages;
+export default ImageList;

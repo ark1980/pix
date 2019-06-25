@@ -3,7 +3,7 @@ import '../custom.css';
 import unsplash from '../api/unsplash';
 import NavBar from './NavBar';
 import Hero from './Hero';
-import ListImages from './ListImages';
+import ImageList from './ImageList';
 
 class App extends Component {
   state = {
@@ -40,7 +40,7 @@ class App extends Component {
       <div>
         <NavBar />
         <Hero submitSearch={this.onSubmitSearch} />
-        <ListImages images={this.state.images} />
+        <ImageList images={this.state.images} />
       </div>
     )
   }
