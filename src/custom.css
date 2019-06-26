@@ -61,3 +61,14 @@ body {
 input:focus {
   outline: 0;
 }
+
+.image-list {
+  width: 70vw;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.image {
+  width: 250px;
+}

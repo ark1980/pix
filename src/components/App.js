@@ -36,6 +36,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.images);
     return(
       <div>
         <NavBar />
